@@ -1,10 +1,9 @@
-
-import mongoose from "mongoose";
+import mongoose from "mongoose"
 
 const {Schema} = mongoose
 
-const companySchema = new Schema({
-
+const companySchema = new Schema({     
+    
 })
 
 const Company = mongoose.model("Company", companySchema)
