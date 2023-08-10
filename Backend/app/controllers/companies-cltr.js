@@ -12,8 +12,6 @@ companiesCltr.register = async(req, res) =>{
         const dbName = body.companyName.toLowerCase()
 
         const url = "mongodb://localhost:27017"
-        // await mongoose.disconnect()
-        console.log("configureDB",)
 
         const newDb = mongoose.createConnection(`${url}/${dbName}`)
 
@@ -35,9 +33,8 @@ companiesCltr.register = async(req, res) =>{
 
 companiesCltr.signIn = async(req, res) =>{
     try{
-        const { companyName } = req.body
-        const company = await Company.findOne({companyName})
-        console.log("signIn")
+        const { body } = req
+        res.json(body.companyName)
     }catch(e){
         res.json(e)
     }
