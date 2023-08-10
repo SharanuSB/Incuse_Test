@@ -4,6 +4,7 @@ const configureDB = async() =>{
     try{
         const DB = await mongoose.connect('mongodb://127.0.0.1:27017/cmp')
         console.log("connected to db")
+        return DB
     }catch(e){
         console.log(e)
     }
